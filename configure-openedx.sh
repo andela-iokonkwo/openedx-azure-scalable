@@ -123,7 +123,7 @@ EOL
 ###################################################
 # Set database vars
 ###################################################
-cat >/tmp/db_vars.yml <<EOL 
+cat >/tmp/db_vars.yml <<EOL
 ---
 EDXAPP_MYSQL_USER_HOST: "%"
 EDXAPP_MYSQL_HOST: "10.0.0.20"
@@ -171,7 +171,7 @@ for i in `seq 1 $(($NUM_APP_SERVERS-1))`; do
   echo "10.0.0.1$i" >> inventory.ini
 done
 
-curl https://raw.githubusercontent.com/tkeemon/openedx-azure-scalable/master/server-vars.yml > /tmp/server-vars.yml
+curl https://raw.githubusercontent.com/andela-iokonkwo/openedx-azure-scalable/master/server-vars.yml > /tmp/server-vars.yml
 
 sudo ansible-playbook -i inventory.ini -u $AZUREUSER --private-key=$HOMEDIR/.ssh/id_rsa multiserver_deploy.yml -e@/tmp/server-vars.yml -e@/tmp/extra_vars.yml -e@/tmp/db_vars.yml
 

@@ -2,6 +2,11 @@
 # Copyright (c) Microsoft Corporation. All Rights Reserved.
 # Licensed under the MIT license. See LICENSE file on the project webpage for details.
 
-EDXAPP_PLATFORM_NAME: "Open edX multiserver on Azure"
+EDXAPP_PLATFORM_NAME: "Learning Academy"
 
 #add more custom variables here
+
+edxapp_use_custom_theme: true
+edxapp_theme_name: 'default'
+edxapp_theme_source_repo: 'https://github.com/Stanford-Online/edx-theme.git'
+edxapp_theme_version: 'HEAD'
